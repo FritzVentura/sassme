@@ -1,0 +1,53 @@
+@import "variables";
+@import "presets";
+
+body{
+    font-family: 100% Helvetica, sans-serif;
+    color: $yellowcolor;
+}
+
+ul{
+    list-style: none;
+
+    li{
+        margin: 0;
+        display: inline;
+
+        a{
+            text-decoration: none;
+            color: $yellowcolor;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+main{
+    width: $width*.9;
+    margin: 0 auto;
+    background: lighten($yellowcolor,10%);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: $value*10;
+    padding: $value*10;
+}
+
+div{
+    background: $yellowcolor;
+    padding: $value*5;
+}
+
+.myContainers{
+    @extend div;
+    color: darken($yellowcolor, 100%);
+}
+
+footer{
+    @extend div;
+    padding: $value*20;
+    margin-top: $value*20;
+}
+
+
+
